@@ -1,4 +1,5 @@
 # Field of view visualisation
+  Visualisation of a filed of view (FOV) in a top down scenario using rays.
 
 ## Description
   This project came to mind stumbling upon an article (https://www.redblobgames.com/articles/visibility/) describing how to achieve field of vision in a top down map. I found this article fun and interesting to read so I decided to have a bit of fun and try and apply the methods author described to achieve a similar effect. The project was done in Unity.
