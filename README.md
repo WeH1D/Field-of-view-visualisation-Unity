@@ -9,11 +9,13 @@
 * #### Casting rays in all directions arond the actor
   This is also the simplest method and involves just casting certain number of rays in all directions from the center.
   The space in-between the rays is then filled in.
+  
   ![image](https://github.com/WeH1D/Field-of-view-visualisation/blob/master/images/method%201.png)
 * ### Casting rays only towards ends of walls
   This method uses a significantly smaller number of rays to determine the field of view of an actor. Its also a method that is less jittery when the actor moves around.
   I achieved this method a bit differently then the author described, but the core principle is still there.
   In my case I just needed to sort the rays by angle before having to fill them in. 
+  
   ![image](https://github.com/WeH1D/Field-of-view-visualisation/blob/master/images/method%202.png)
 
 ## Notes
