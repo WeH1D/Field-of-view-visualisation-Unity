@@ -109,10 +109,14 @@ public class visionCorners : MonoBehaviour
         //hit points have to be sorted so we can properly fill in the spaces in between with triangles
         sortRayHitPoints(numberOfDrawnRays);
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit info4) && !info4.collider.CompareTag("wall"))
-            fillInLines(numberOfDrawnRays);
-        else
-            GetComponent<MeshFilter>().mesh.Clear();
+        if(!drawRays)
+        {
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit info4) && !info4.collider.CompareTag("wall"))
+                fillInLines(numberOfDrawnRays);
+            else
+                GetComponent<MeshFilter>().mesh.Clear();
+
+        }
 
         //hides the lines representing the rays
         if (!drawRays)

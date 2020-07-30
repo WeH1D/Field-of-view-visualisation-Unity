@@ -63,10 +63,13 @@ public class vision : MonoBehaviour
         }
 
         //fill in between lines with triangles
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit info2) && !info2.collider.CompareTag("wall"))
-            fillINLines();
-        else
-            GetComponent<MeshFilter>().mesh.Clear();
+        if(!drawRays)
+        {
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit info2) && !info2.collider.CompareTag("wall"))
+                fillINLines();
+            else
+                GetComponent<MeshFilter>().mesh.Clear();
+        }
 
         //hides the lines representing the rays
         if(!drawRays)
